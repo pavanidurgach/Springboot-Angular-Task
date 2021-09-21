@@ -1,0 +1,32 @@
+<div class="border">
+    <div class="heading">
+      <h2 style="text-align: center;">Books Store</h2>
+          <button RouterLink="/add-book">Add Book</button>
+          <button routerLink="/get-book">Get Books</button>
+    <div>
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        <div class="sub_heading">
+            <h3>Title</h3>
+            <input type="text" formControlName="title" placeholder="title" name="title" class="input_2 form-control"
+             id="title">
+            <h3>Author</h3>
+            <input type="text" formControlName="author" placeholder="author" name="author" class="input_2 form-control"
+             id="author">
+        </div>
+            
+        <div class="split">
+            <div class="column">
+              <h3 style="margin-bottom: -10px;">Price</h3>
+              <input type="number" formControlName="price" placeholder="price" name="price" class="input_1 form-control"
+             id="price">
+              <button value="submit">Submit</button>
+            </div>
+            <div>
+              <h3>Published On</h3>
+              <input type="date" formControlName="publishedOn" placeholder="publishedOn" name="publishedOn" class="date_picler form-control"
+             id="publishedOn">
+            </div>
+        </div>
+    </form>
+    </div>
+</div>   

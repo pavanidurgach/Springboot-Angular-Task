@@ -1,0 +1,24 @@
+<div class="border">
+    <div class="booksData">
+        <table class="book" *ngFor="let book of allBooks">
+            <tr>
+                <td style="width:25%;">Title</td>
+                <td>:{{book.title}}</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Author</td>
+                <td>:{{book.author}}</td>
+            </tr>
+            <tr>
+                <td style="margin-right:25px;">Price</td>
+                <td>:{{book.price}}/-</td>
+            </tr>
+            <tr>
+                <td style="width:25%;">Published On</td>
+                <td>:{{book.publishedOn.split("T")[0]}}</td>
+            </tr>
+        </table>
+        <button routerLink="/add-book">Back</button>
+    </div>
+    
+</div>
